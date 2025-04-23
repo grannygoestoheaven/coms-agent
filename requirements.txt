@@ -3,7 +3,7 @@ torch==2.0.1
 torchvision==0.15.2
 torchaudio==2.0.2
 transformers==4.39.3
-gradio==5.25.2
+gradio==3.50.2
 streamlit==1.32.2
 spacy==3.7.2
 nltk==3.8.1
