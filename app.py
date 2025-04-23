@@ -1,7 +1,5 @@
-import subprocess
-subprocess.check_call(["pip", "install", "-r", "requirements.txt"])
-
-
+# import subprocess
+# subprocess.check_call(["pip", "install", "-r", "requirements.txt"])
 import nltk
 import spacy
 import transformers
