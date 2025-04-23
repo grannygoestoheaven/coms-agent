@@ -1,12 +1,10 @@
-import subprocess
-subprocess.check_call(["pip", "install", "-r", "requirements.txt"])
-
 import nltk
 import spacy
 import transformers
-import re
 import gradio as gr
+import re
 
+from urllib.parse import urlparse, parse_qs
 from utils.youtube_api import fetch_comments
 from utils.nlp_utils import analyze_sentiment, categorize_comments_by_sentiment, summarize_comments
 
@@ -42,6 +40,7 @@ def analyze_youtube_comments(youtube_url):
                 return "No comments found for this video."
         else:
             return "Invalid YouTube URL. Please try again."
+    return output
 
 interface = gr.Interface(
     fn=analyze_youtube_comments,

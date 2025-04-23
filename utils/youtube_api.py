@@ -20,8 +20,22 @@ def fetch_comments(video_id):
             textFormat="plainText",
             order="relevance"
         ).execute()
-        comments = [item["snippet"]["topLevelComment"]["snippet"]["textDisplay"] for item in response.get("items", [])]
+        
+        comments = []
+        for item in response.get("items", []):
+            snippet = item["snippet"]["topLevelComment"]["snippet"]
+            author = snippet["authorDisplayName"]
+            text = snippet["textDisplay"]
+        
+            # Filter out uploader's comments and promo-like blocks
+            if author.lower() == "networkchuck":
+                continue
+            if text.count("http") > 1 or "\n" in text:
+                continue
+        
+            comments.append(text)
         return comments
+        # comments = [item["snippet"]["topLevelComment"]["snippet"]["textDisplay"] for item in response.get("items", [])]
     except Exception as e:
         print(f"An error occurred: {e}")
         return []
