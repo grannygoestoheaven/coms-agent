@@ -1,11 +1,24 @@
-nltk
-spacy
-transformers
-streamlit
-gradio
-python-dotenv
-google-api-python-client
+numpy<2
 torch==2.0.1
-torchvision
-torchaudio
-tensorflow
+torchvision==0.15.2
+torchaudio==2.0.2
+transformers==4.39.3
+gradio==5.25.2
+streamlit==1.32.2
+spacy==3.7.2
+nltk==3.8.1
+python-dotenv==1.0.1
+google-api-python-client==2.126.0
+tensorflow==2.15.0
+
+# nltk
+# spacy
+# transformers
+# streamlit
+# gradio
+# python-dotenv
+# google-api-python-client
+# torch==2.0.1
+# torchvision
+# torchaudio
+# tensorflow
