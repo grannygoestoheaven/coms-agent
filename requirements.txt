@@ -1,0 +1,11 @@
+nltk
+spacy
+transformers
+streamlit
+gradio
+python-dotenv
+google-api-python-client
+torch
+torchvision
+torchaudio
+tensorflow

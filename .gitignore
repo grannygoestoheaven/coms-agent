@@ -1,0 +1,4 @@
+venv_coms_agent/
+.env
+.envrc
+utils/__pycache__/
